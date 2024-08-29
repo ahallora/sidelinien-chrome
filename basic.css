@@ -1,0 +1,55 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent: #3c50f9;
+    --foreground: #111;
+    --muted: #737373;
+    --background: #fff;
+    --background-muted: #dadbe6;
+    --border-muted: #c8c8c8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #3c50f9;
+    --foreground: #ddd;
+    --muted: #666;
+    --background: #111;
+    --background-muted: #222;
+    --border-muted: #333;
+  }
+}
+
+button#sidelinien-override-toggle {
+  position: fixed;
+  z-index: 999999;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  appearance: none;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: transparent;
+  overflow: hidden;
+  transition: all 200ms ease;
+
+  &:hover {
+    transform: scale(110%);
+    cursor: pointer;
+  }
+}
+
+button#sidelinien-override-toggle:after {
+  content: "";
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMSAxNWEyIDIgMCAwIDEtMiAySDdsLTQgNFY1YTIgMiAwIDAgMSAyLTJoMTRhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNMTMgOEg3Ii8+PHBhdGggZD0iTTE3IDEySDciLz48L3N2Zz4=");
+  background-size: 24px 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

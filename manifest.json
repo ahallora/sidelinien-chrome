@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Sidelinien Chatter",
+  "version": "1.0",
+  "description": "Gør sidelinien lidt mere behagelig at se på",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://sidelinien.dk/forums/",
+        "https://sidelinien.dk/forums/"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css", "basic.css"]
+    }
+  ]
+}
